@@ -1,0 +1,18 @@
+{
+
+
+    "version": 2,
+    "bluids":[
+{
+
+        "src": "src/server.ts",
+        "use" : "@vercel/node"
+   }   ],
+   "routes":[
+{
+    "src": "(0*)",
+    "dest": "src/server.ts"
+}
+
+   ]
+}
