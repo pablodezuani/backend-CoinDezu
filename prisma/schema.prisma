@@ -10,9 +10,9 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://CoinDezu_owner:qeY1uR2hytiN@ep-wispy-lab-a55ul09u.us-east-2.aws.neon.tech/CoinDezu?sslmode=require"
+  url      = env("DATABASE_URL")
 }
-//env("DATABASE_URL")
+
 
 model User{
 id String @id @default(uuid())
