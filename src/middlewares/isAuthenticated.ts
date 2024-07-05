@@ -36,7 +36,6 @@ export function isAuthenticated(
   }catch(err){
     return res.status(401).end();
   }
-
-
+//teste
 
 }
