@@ -17,7 +17,7 @@ error:err.message
 }
 return res.status(500).json({
     status: 'error',
-    message:'Internal server error'
+    message:'Internal server erro'
 })
 })
 app.listen(3333 , () => console.log('Servidor online!'))
