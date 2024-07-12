@@ -1,4 +1,4 @@
-import prismaClient from '../prisma/index'; // Verifique se o caminho está correto
+import prismaClient from '../prisma/index';
 
 
 class CreateMetaService {
