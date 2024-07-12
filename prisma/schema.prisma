@@ -10,15 +10,15 @@ datasource db {
 model User {
   id          String        @id @default(uuid())
   name        String
-  email       String       
+  email       String
   Password    String
   created_at  DateTime?     @default(now())
-  updated_at  DateTime?   @default(now())
+  updated_at  DateTime?     @default(now())
   transactions Transaction[]
-  goals       Goal[]
-
+ goals       Goal[]
   @@map("users")
 }
+
 
 model Transaction {
   id                 String    @id @default(uuid())
@@ -31,7 +31,7 @@ model Transaction {
   user_id            String
 
   @@map("transactions")
-}
+} 
 
 model Goal {
   id                 String    @id @default(uuid())
