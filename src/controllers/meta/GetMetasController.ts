@@ -3,7 +3,7 @@ import { GetMetasService } from '../../services/GetMetasService.ts';
 
 class GetMetasController {
   async handle(req: Request, res: Response) {
-    const user_id = req.user_id; // Obtenha o ID do usuário a partir do token
+    const user_id = req.user_id; 
 
     try {
       const getMetasService = new GetMetasService();
