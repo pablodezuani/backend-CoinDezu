@@ -5,8 +5,7 @@ CREATE TABLE "Movimentacao" (
     "valor" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT "categories_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Movimentacao_pkey" PRIMARY KEY ("id")
 );
 
 
