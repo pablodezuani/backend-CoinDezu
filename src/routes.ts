@@ -4,6 +4,7 @@ import { AuthUserController } from './controllers/user/AuthUserController';
 import { isAuthenticated } from './middlewares/isAuthenticated';
 import { DetailuserController } from './controllers/user/DetailUserController';
 import { CreateMetaController } from './controllers/meta/CreateMetaController';
+import { GetMetasController } from './controllers/meta/GetMetasController'; // Importar o controlador
 
 const router = Router();
 
@@ -14,5 +15,6 @@ router.get('/me', isAuthenticated, new DetailuserController().handle);
 
 // Rota para adicionar uma meta
 router.post('/metas', isAuthenticated, new CreateMetaController().handle);
+router.get('/goals', isAuthenticated, new GetMetasController().handle); // Rota para buscar metas
 
 export { router };
