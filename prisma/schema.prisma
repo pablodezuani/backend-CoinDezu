@@ -51,7 +51,6 @@ model Goal {
   @@map("goals")
 }
 
-
 model Confirmacao {
   id           Int      @id @default(autoincrement())
   nome         String
