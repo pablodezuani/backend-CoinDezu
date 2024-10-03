@@ -4,7 +4,7 @@ interface ConfirmationRequest {
   nome: string;
   tipo_presenca: string;
   acompanhantes?: string[];
-  aceita_termos: boolean;
+  aceita_termos?: boolean;
 }
 
 class CreateConfirmationService {
