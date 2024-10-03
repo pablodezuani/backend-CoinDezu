@@ -54,7 +54,7 @@ model Goal {
 model Confirmacao {
   id           Int      @id @default(autoincrement())
   nome         String
-  tipoPresenca String
+  tipoPresenca String?
   acompanhantes String?
-  aceitaTermos Boolean
+  aceitaTermos Boolean?
 }
