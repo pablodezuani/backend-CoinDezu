@@ -1,12 +1,10 @@
-import { CreateUserController } from './controllers/user/CreateUserController';
 import { Router } from 'express';
+
+import { CreateUserController } from './controllers/user/CreateUserController';
 import { AuthUserController } from './controllers/user/AuthUserController';
 import { isAuthenticated } from './middlewares/isAuthenticated';
 import { DetailuserController } from './controllers/user/DetailUserController';
-import { CreateMetaController } from './controllers/meta/CreateMetaController';
-import { GetMetasController } from './controllers/meta/GetMetasController'; 
-import { ConfirmationController } from '.././src/controllers/confirmation/ConfirmationController'; // Adicione esta linha
-
+import { ChildController } from './controllers/user/child.controller';
 
 const router = Router();
 
@@ -15,11 +13,11 @@ router.post('/users', new CreateUserController().handle);
 router.post('/session', new AuthUserController().handle);
 router.get('/me', isAuthenticated, new DetailuserController().handle);
 
-// Rotas de metas
-router.post('/metas', isAuthenticated, new CreateMetaController().handle);
-router.get('/goals', isAuthenticated, new GetMetasController().handle);
-
-// Rota para confirmação de presença
-router.post('/confirmar', new ConfirmationController().create); // Adicione esta linha
+// Rotas de criança
+router.post('/children', isAuthenticated, ChildController.create);
+router.get('/children', isAuthenticated, ChildController.getAll);
+router.get('/children/:id', isAuthenticated, ChildController.getById);
+router.put('/children/:id', isAuthenticated, ChildController.update);
+router.delete('/children/:id', isAuthenticated, ChildController.delete);
 
 export { router };
